@@ -1,0 +1,188 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eee;
+    color: #333;
+    padding-top: 80px; /* Prevents content from hiding under the fixed header */
+}
+
+/* 12: Navbar fixed to top */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #eee;
+    display: flex; /* 14: Flexbox used here */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    z-index: 100;
+}
+
+#header-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+#nav-bar {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Hero / Form Section */
+.hero {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.hero h2 {
+    margin-bottom: 20px;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#email {
+    width: 100%;
+    max-width: 300px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.btn {
+    background-color: #f1c40f;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e67e22;
+}
+
+/* Features Section */
+#features {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.feature .icon {
+    font-size: 40px;
+    margin-right: 40px;
+    color: #e67e22;
+}
+
+.feature .desc h3 {
+    margin-bottom: 5px;
+}
+
+/* Video Section */
+#how-it-works {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    padding: 0 20px;
+}
+
+#video {
+    max-width: 100%;
+    border: none;
+}
+
+/* Pricing Section */
+#pricing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+}
+
+.product {
+    border: 1px solid #333;
+    border-radius: 3px;
+    text-align: center;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.product .level {
+    background-color: #ddd;
+    padding: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.product h2 {
+    margin: 15px 0;
+}
+
+.product ol {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.product ol li {
+    padding: 5px 0;
+}
+
+.product .btn {
+    margin: 20px auto;
+    width: 50%;
+}
+
+/* 13: Media Query for Mobile */
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    #nav-bar {
+        margin-top: 10px;
+    }
+
+    .feature {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature .icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
